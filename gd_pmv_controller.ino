@@ -59,11 +59,6 @@ void loop()
     // Get the current uptime
     unsigned long currentMillis = millis();
 
-    // Reset previousMillis in the event of a rollover.
-    if(previousMillis > currentMillis){
-        previousMillis = 0;
-    }
-
     // Check the timer
     if(currentMillis - previousMillis > interval){
         previousMillis = millis();
